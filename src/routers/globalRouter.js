@@ -1,9 +1,10 @@
 import express from 'express';
 
 const globalRouter = express.Router();
+import { join } from '../controllers/userController';
+import { trending } from '../controllers/videoController';
 
-const handleHome = (req, res) => res.send('Home');
-
-globalRouter.get('/', handleHome);
+globalRouter.get('/', trending);
+globalRouter.get('/join', join);
 
 export default globalRouter;
