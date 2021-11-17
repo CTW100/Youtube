@@ -7,14 +7,14 @@
     "url": "git+https://github.com/nomadcoders/wetube-reloaded.git"
   },
   "scripts": {
-    "dev": "nodemon --exec babel-node src/server.js"
+    "dev": "nodemon --exec babel-node src/init.js"
   },
   "author": "Nicolas Serrano <nico@nomadcoders.co>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nomadcoders/wetube-reloaded/issues"
+    "url": "https://github.com/nomadcoders/youtube/issues"
   },
-  "homepage": "https://github.com/nomadcoders/wetube-reloaded#readme",
+  "homepage": "https://github.com/nomadcoders/youtube#readme",
   "dependencies": {
     "express": "^4.17.1",
     "mongoose": "^6.0.13",
