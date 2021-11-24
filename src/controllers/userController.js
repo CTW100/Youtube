@@ -1,6 +1,7 @@
 import User from './models/User';
 import fetch from 'node-fetch';
 import bcrypt from 'bcrypt';
+import { render } from 'pug';
 
 export const getJoin = (req, res) => res.render('join', { pageTitle: 'Join' });
 export const postJoin = async (req, res) => {
@@ -159,6 +160,18 @@ export const postEdit = async (req, res) => {
   );
   req.session.user = updatedUser;
   return res.redirect('/users/edit');
+};
+
+export const getChangePassword = (req, res) => {
+  if (req.session.user.socialOnly === true) {
+    return res.redirect('/');
+  }
+  return render('users/change-password', { pageTitle: 'Change Passowrd' });
+};
+
+export const postChangePassword = (req, res) => {
+  //send notification
+  return res.redirect('/');
 };
 
 export const see = (req, res) => res.send('See User');
