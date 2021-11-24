@@ -12,5 +12,5 @@ const db = mongoose.connection;
 const handlerOpen = () => console.log('Connected to DB');
 const handlerError = (error) => console.log('DB Error', error);
 
-db.on('error', handlerEror);
-db.once('open', handleOpen);
+db.on('error', handlerError);
+db.once('open', handlerOpen);
